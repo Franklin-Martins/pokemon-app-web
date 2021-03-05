@@ -1,0 +1,29 @@
+.main-header{
+    width: 100vw;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(43, 38, 38);
+}
+
+.main-header img{
+    width: 250px;
+}
+
+.main-header ul{
+    display: flex;
+    padding-top: 20%;
+}
+
+.main-header ul li + li{
+    border-left: 2px solid #fff;
+}
+
+.main-header ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    height: 20px;
+    padding: 10px;
+}
