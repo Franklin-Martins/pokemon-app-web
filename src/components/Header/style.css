@@ -1,6 +1,6 @@
 .main-header{
-    width: 100vw;
-    padding: 40px;
+    width: 100%;
+    padding: 40px 10px 40px 40px;
     display: flex;
     justify-content: space-between;
     background-color: rgb(43, 38, 38);
