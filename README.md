@@ -11,6 +11,6 @@ In the project directory, you can run:
 
 ### `yarn start`
 
-### So you can see the List of Pokemons
+### Then you can see the List of Pokemons
 
 ![banner](https://github.com/Franklin-Martins/pokemon-app-web/blob/Main/src/assets/github/Pokemon-banner.png)
