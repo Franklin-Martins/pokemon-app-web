@@ -19,8 +19,8 @@ const Pagination: React.FC<ModalPagination> = ({ goToNextPage, goToPreviousPage 
     return(
         <>
         <div className="pagination">
-        {goToPreviousPage && <button onClick={handleGotoPreviousPage} > <strong>Previous</strong> </button>}
-        {goToNextPage && <button onClick={handleGotoNextPage} > <strong>Next</strong> </button>}
+        {goToPreviousPage && <button onClick={handleGotoPreviousPage} > <h1>Previous</h1> </button>}
+        {goToNextPage && <button onClick={handleGotoNextPage} > <h1>Next</h1> </button>}
         </div>
         </>
     )

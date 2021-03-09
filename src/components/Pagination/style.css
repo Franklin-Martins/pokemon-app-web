@@ -13,11 +13,7 @@
 .pagination button{
     border: none;
     color: rgb(43, 38, 38);;
-    padding: 10px;
-    font-size: 24px;
+    padding: 10px 10px;
+    margin-top: 20px;
     background-color: transparent;
-}
-
-.pagination button:target{
-    border: 1px solid pink;
 }

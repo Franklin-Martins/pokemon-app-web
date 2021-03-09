@@ -9,14 +9,6 @@ import api from '../../services/api'
 
 import './style.css'
 
-interface AbilityDTO{
-    slot: number;
-    type: {
-        name: string,
-        url: string
-    }
-}
-
 interface PokemonAtributes{
     id: string;
     name: string;
@@ -67,7 +59,6 @@ const Main: React.FC = ()=> {
     return(
         <>
         <Header />
-        <h2>Lista de Pokemons fornecidos pela api oficial</h2>
         <div className="grid-container">    
         {pokemons? pokemons.map((pokemon)=>{
             return(

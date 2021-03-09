@@ -16,27 +16,6 @@ interface TypeOfPokemonDTO{
     }
 }
 
-interface TypeOfPokemon{
-	name: string;
-}
-
-const colors = {
-    fire: '#FDDFDF',
-	grass: '#DEFDE0',
-	electric: '#FCF7DE',
-	water: '#DEF3FD',
-	ground: '#f4e7da',
-	rock: '#d5d5d4',
-	fairy: '#fceaff',
-	poison: '#98d7a5',
-	bug: '#f8d5a3',
-	dragon: '#97b3e6',
-	psychic: '#eaeda1',
-	flying: '#F5F5F5',
-	fighting: '#E6E0D4',
-	normal: '#F5F5F5'
-}
-
 const Card: React.FC<CardProps> = ({ id, name }) =>{
 	const [typesOfPokemon, setTypesOfPokemon] = useState<string[]>([])
 	useEffect(()=>{
@@ -49,23 +28,23 @@ const Card: React.FC<CardProps> = ({ id, name }) =>{
 	let color;
 	switch (typesOfPokemon[0]) {
 		case 'fire':
-			color = '#FDDFDF'		
+			color = '#fcc6c6'		
 			break;
 
 		case 'grass':
-			color = '#DEFDE0'		
+			color = '#b1f5b6'		
 			break;
 
 		case 'electric':
-			color = '#FCF7DE'		
+			color = '#feffb0'		
 			break;
 
 		case 'water':
-			color = '#DEF3FD'		
+			color = '#c2ebfd'		
 			break;
 
 		case 'ground':
-			color = '#f4e7da'		
+			color = '#fdd2a3'		
 			break;
 
 		case 'rock':
@@ -77,11 +56,11 @@ const Card: React.FC<CardProps> = ({ id, name }) =>{
 			break;
 
 		case 'poison':
-			color = '#98d7a5'		
+			color = '#eac8fa'		
 			break;
 
 		case 'bug':
-			color = '#f8d5a3'		
+			color = '#fdd487'		
 			break;
 
 		case 'dragon':
@@ -105,7 +84,7 @@ const Card: React.FC<CardProps> = ({ id, name }) =>{
 			break;
 
 	}
-	console.log(color)
+
     return(
         <div style={{backgroundColor: color}} className="card-container">
             <header className="card-header">
