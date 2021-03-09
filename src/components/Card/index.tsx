@@ -79,6 +79,10 @@ const Card: React.FC<CardProps> = ({ id, name }) =>{
 			color = '#E6E0D4'		
 			break;
 
+		case 'ghost':
+			color = 'rgb(219, 169, 252)'		
+			break;
+
 		default:
 			color = '#F5F5F5'
 			break;
