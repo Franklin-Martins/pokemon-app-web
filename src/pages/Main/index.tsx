@@ -9,9 +9,18 @@ import api from '../../services/api'
 
 import './style.css'
 
+interface AbilityDTO{
+    slot: number;
+    type: {
+        name: string,
+        url: string
+    }
+}
+
 interface PokemonAtributes{
     id: string;
     name: string;
+    abilities?: string[];
     url: string;
 }
 
@@ -24,7 +33,6 @@ const Main: React.FC = ()=> {
 
     useEffect(()=>{
         let cancel:()=>void;
-        console.log(currentPage)
         async function loadPokemons(){
             setLoading(true)
             const response = await api.get(currentPage, {
@@ -37,9 +45,10 @@ const Main: React.FC = ()=> {
             setPokemons(response.data.results.map((pokemon:PokemonAtributes) => {
                 const auxList= pokemon.url.split('/');
                 pokemon.id = auxList[auxList.length -2]
-                console.log(pokemon.id)
                 return pokemon
             }))
+            //const abilities = await api.get(currentPage+`/${pokemon.id}`)
+            //pokemon.abilities = (abilities.data.types.map((ability:AbilityDTO)=> ability.type.name))            
         }
         loadPokemons()
         return () => {
@@ -62,7 +71,7 @@ const Main: React.FC = ()=> {
         <div className="grid-container">    
         {pokemons? pokemons.map((pokemon)=>{
             return(
-                <div key={pokemon.name} className="grid-item">
+                <div key={pokemon.id} className="grid-item">
                 <Card
                 id={pokemon.id}
                 name={pokemon.name}
